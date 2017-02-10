@@ -1,0 +1,23 @@
+1、需要下载的依赖包如下：
+yum -y groupinstall "Development Tools"
+yum -y install gtk+-devel gtk2-devel
+yum -y install libXpm-devel
+yum -y install libpng-devel
+yum -y install giflib-devel
+yum -y install libtiff-devel libjpeg-devel
+yum -y install ncurses-devel
+yum -y install gpm-devel dbus-devel dbus-glib-devel dbus-python
+yum -y install GConf2-devel pkgconfig
+yum -y install libXft-devel
+
+2、到如下链接下载emacs的安装包并解压
+http://ftp.gnu.org/pub/gnu/emacs/
+#解压文件
+tar xvf emacs-24.2.tar.gz
+
+3、安装emacs
+cd emacs-24.2
+          ./configure --prefix=/usr/local --with-x-toolkit=gtk
+make && make install
+
+
