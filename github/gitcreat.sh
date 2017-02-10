@@ -1,4 +1,5 @@
-1 mkdir gitRepo
+1
+  mkdir gitRepo
 2 cd gitRepo
 3 git init  #初始化本地仓库
 4 git add xxx  #添加要push到远程仓库的文件或文件夹
