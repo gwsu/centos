@@ -1,0 +1,15 @@
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+sudo yum install mysql-server
+mysql -u root
+sudo chown -R openscanner:openscanner /var/lib/mysql
+service mysqld restart
+mysql -u root
+mysql > use mysql;
+mysql > update user set password=password(‘123456‘) where user=‘root‘;
+mysql > exit;
+sudo vim /etc/sysconfig/iptables
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 3306 -j ACCEPT
+sudo service iptables restart
+
+
